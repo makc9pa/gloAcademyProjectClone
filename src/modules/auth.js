@@ -1,12 +1,13 @@
 const auth = () => {
     const buttonAuth = document.querySelector('.button-auth')
-    const modalAuth = document.querySelector('.modal-auth')
     const buttonOut = document.querySelector('.button-out')
+    const modalAuth = document.querySelector('.modal-auth')
     const userName = document.querySelector('.user-name')
     const closeAuth = document.querySelector('.close-auth')
     const logInForm = document.getElementById('logInForm')
     const inputLogin = document.getElementById('login')
     const inputPassword = document.getElementById('password')
+    const buttonCart = document.querySelector('.button-cart')
 
 
     const login = (user) => {
@@ -14,6 +15,7 @@ const auth = () => {
 
         buttonOut.style.display = 'flex'
         userName.style.display = 'flex'
+        buttonCart.style.display = 'flex'
 
         userName.textContent = user.login
         modalAuth.style.display = 'none'
@@ -24,6 +26,7 @@ const auth = () => {
 
         buttonOut.style.display = 'none'
         userName.style.display = 'none'
+        buttonCart.style.display = 'none'
 
         localStorage.removeItem('user')
     }
